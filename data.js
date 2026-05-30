@@ -1,116 +1,101 @@
 /*
- * Seed apartment data for the West Boca apartment comparison tool.
+ * Seed apartment data — Palm Beach area, near The Breakers Golf Course.
  *
- * IMPORTANT: rents and distances below are approximate, gathered from public
- * listing sites in May 2026. Pricing changes constantly — treat these as a
- * starting point and confirm with each community before deciding. Every entry
- * has a `source` link so you can verify the latest numbers.
+ * Reference point: The Breakers Palm Beach golf courses (Ocean Course & Rees
+ * Jones Course), One South County Road, Palm Beach, FL 33480.
  *
- * Distances are straight-line estimates within West Boca Raton and are meant
- * for relative comparison only. You can edit any field right in the app.
+ * IMPORTANT: rents and distances are approximate, gathered from public listing
+ * sites in May 2026. Pricing changes constantly — treat these as a starting
+ * point and verify with each community before deciding. Every entry has a
+ * `source` link for current numbers.
  *
- * The "golf course" reference point is the cluster of West Boca golf
- * communities (Boca West Country Club / Boca Lago / Boca Golf & Tennis).
- * There is no public "Breakers" golf course in West Boca — The Breakers is in
- * Palm Beach — so distances use the nearest West Boca golf course.
+ * Distances are straight-line estimates via the most likely route (Dixie Hwy
+ * or A1A / Southern Blvd bridge to Palm Beach island) and are for relative
+ * comparison only.
+ *
+ * Nearest Aldi locations used for distances:
+ *   • 214 N Dixie Hwy, Lake Worth Beach, FL 33460  (closest to south options)
+ *   • 2481 Okeechobee Blvd, West Palm Beach, FL 33409  (closest to WPB options)
  */
 
 const SEED_APARTMENTS = [
   {
-    id: "arbor-oaks",
-    name: "Arbor Oaks Apartments & Townhomes",
-    address: "9817 Arbor Oaks Ln, Boca Raton, FL 33428",
+    id: "royal-st-george",
+    name: "Royal St. George at the Villages",
+    address: "1441 Brandywine Rd, West Palm Beach, FL 33409",
     beds: 2,
     baths: 2,
-    sqftLow: 820,
-    sqftHigh: 1400,
-    rent2br: 2150,        // 2BR starting; smaller 1BR units start ~$1,930
-    rent1br: 1930,
-    milesToGolf: 1.5,     // near Boca Lago Golf & Country Club
-    milesToAldi: 2.5,
-    petFriendly: true,
-    petNote: "$500 non-refundable + $50/mo per pet",
-    amenities: ["Resort-style pool", "Fitness center", "Game room", "Lake views", "Townhome options"],
-    source: "https://www.apartments.com/arbor-oaks-apartments-townhomes-boca-raton-fl/gq30stx/",
-    notes: "Best shot at staying near/under $2k — lower-end 1BR units dip below budget.",
-  },
-  {
-    id: "cortland-uptown",
-    name: "Cortland Uptown Boca",
-    address: "20940 Uptown Ave, Boca Raton, FL 33428",
-    beds: 2,
-    baths: 2,
-    sqftLow: 718,
-    sqftHigh: 1737,
-    rent2br: 2645,
-    rent1br: 2100,
-    milesToGolf: 2.0,
-    milesToAldi: 0.3,     // Aldi is inside the Uptown Boca shopping center — walkable
-    petFriendly: true,
-    petNote: "Pet friendly (deposit + monthly rent apply)",
-    amenities: ["Walk to Aldi/shops/dining", "Luxury finishes", "Pool", "Fitness center", "Near Turnpike"],
-    source: "https://www.apartments.com/cortland-uptown-boca-boca-raton-fl/dxnyyhl/",
-    notes: "Unbeatable for the Aldi requirement (walkable), but 2BR runs well over $2k.",
-  },
-  {
-    id: "residences-uptown",
-    name: "The Residences at Uptown",
-    address: "9500 Glades Rd, Boca Raton, FL 33428",
-    beds: 1,
-    baths: 1,
-    sqftLow: 800,
-    sqftHigh: 1400,
-    rent2br: 2400,
-    rent1br: 1800,        // some units advertised starting ~$1,800
-    milesToGolf: 3.0,
-    milesToAldi: 0.5,
-    petFriendly: true,
-    petNote: "Pet friendly",
-    amenities: ["On Glades Rd corridor", "Class-A luxury", "Pool", "Fitness center", "Close to Aldi"],
-    source: "https://rpfla.com/portfolio_page/the-residences-at-uptown/",
-    notes: "Smaller units can land near budget; great Aldi proximity on Glades Rd.",
-  },
-  {
-    id: "addison-place",
-    name: "Addison Place",
-    address: "21925 Mizner Way, Boca Raton, FL 33433",
-    beds: 2,
-    baths: 2,
-    sqftLow: 1000,
-    sqftHigh: 1450,
-    rent2br: 2185,
-    rent1br: 1850,
-    milesToGolf: 2.0,     // near Boca West Country Club
-    milesToAldi: 1.0,     // Aldi on Powerline Rd nearby
-    petFriendly: true,
-    petNote: "Pet friendly",
-    amenities: ["Resort pool & spa", "Clubhouse", "24hr fitness", "Tennis court", "Car wash"],
-    source: "https://www.apartments.com/addison-place-boca-raton-fl/pdv5gss/",
-    notes: "Closest of the luxury options to Boca West golf; 2BR just over $2k.",
-  },
-  {
-    id: "luxe-boca",
-    name: "The Luxe at Boca",
-    address: "9860 SW 3rd St, Boca Raton, FL 33428",
-    beds: 2,
-    baths: 2,
-    sqftLow: 750,
+    sqftLow: 900,
     sqftHigh: 1300,
-    rent2br: 2295,
-    rent1br: 1950,
-    milesToGolf: 2.0,
-    milesToAldi: 2.0,
+    rent2br: 1965,    // 2BR starting; range runs up to ~$3,387 depending on unit
+    rent1br: 1620,
+    milesToGolf: 8.0, // ~8 mi to The Breakers via Southern Blvd bridge
+    milesToAldi: 2.5, // Aldi at 2481 Okeechobee Blvd, WPB
     petFriendly: true,
-    petNote: "Two dog parks on-site",
-    amenities: ["Multiple pools", "Tennis court", "Two dog parks", "Spa/hot tub", "Granite counters"],
-    source: "https://www.theluxeatboca.com/",
-    notes: "Strong amenities; 1BR can approach budget, 2BR a bit above.",
+    petNote: "Pet friendly",
+    amenities: ["In-unit washer/dryer", "Pool", "Fitness center", "Near I-95", "Minutes to shopping"],
+    source: "https://www.apartments.com/royal-st-george-at-the-villages-apartment-homes-west-palm-beach-fl/jedjtp4/",
+    notes: "Best shot at a true 2BR under $2k — entry-level units start at $1,965. In the Villages of Palm Beach Lakes.",
+  },
+  {
+    id: "the-mid",
+    name: "The MID Apartment Residences",
+    address: "1601 N Dixie Hwy, Lake Worth Beach, FL 33460",
+    beds: 2,
+    baths: 1,
+    sqftLow: 635,
+    sqftHigh: 1028,
+    rent2br: 2200,   // 2BR est.; range $1,799–$2,349 across 1BR/2BR
+    rent1br: 1799,
+    milesToGolf: 5.5, // ~5.5 mi north on Dixie Hwy / via Lake Worth bridge
+    milesToAldi: 0.4, // Aldi Lake Worth at 214 N Dixie Hwy — same street, walkable!
+    petFriendly: true,
+    petNote: "$500 fee (1st pet) + $250 (2nd pet); $30–$50/mo pet rent",
+    amenities: ["Walkable to Aldi", "Close to downtown Lake Worth", "1 mi to beach", "Modern finishes", "Pet friendly"],
+    source: "https://www.apartments.com/the-mid-apartment-residences-lake-worth-fl/phj0mkt/",
+    notes: "Best Aldi score — Aldi is literally on the same street, under half a mile. Closest to The Breakers of the budget options.",
+  },
+  {
+    id: "avery-lake-worth",
+    name: "Avery Lake Worth Beach",
+    address: "3300 Boutwell Rd, Lake Worth Beach, FL 33461",
+    beds: 2,
+    baths: 2,
+    sqftLow: 593,
+    sqftHigh: 936,
+    rent2br: 2100,   // 2BR est.; advertised starting at $1,870 (likely 1BR)
+    rent1br: 1870,
+    milesToGolf: 7.5, // ~7.5 mi south of The Breakers
+    milesToAldi: 2.0, // Aldi Lake Worth Beach ~2 mi
+    petFriendly: true,
+    petNote: "Pet friendly",
+    amenities: ["2 Months FREE promo (verify)", "Modern finishes", "Pool", "Fitness center", "Lake Worth Beach location"],
+    source: "https://www.apartments.com/avery-lake-worth-beach-lake-worth-beach-fl/w25tpkh/",
+    notes: "Active move-in promotion (2 months free on select units) — effective monthly cost can dip well under $2k.",
+  },
+  {
+    id: "inscription-wpb",
+    name: "Inscription West Palm Beach",
+    address: "1991 Presidential Way, West Palm Beach, FL 33401",
+    beds: 2,
+    baths: 2,
+    sqftLow: 1150,
+    sqftHigh: 1179,
+    rent2br: 3090,   // 2BR starting ~$3,090; over budget but best golf views
+    rent1br: 2200,
+    milesToGolf: 4.0, // ~4 mi; overlooks a Jack Nicklaus-designed course, close to downtown WPB
+    milesToAldi: 3.5, // Aldi WPB ~3.5 mi
+    petFriendly: true,
+    petNote: "Pet friendly",
+    amenities: ["Golf course views", "Jack Nicklaus course on-site", "Luxury finishes", "Pool", "Near downtown WPB"],
+    source: "https://www.apartments.com/inscription-west-palm-beach-west-palm-beach-fl/tkf2rfb/",
+    notes: "Closest to a golf course of any option (overlooks one) but 2BR is well over budget. 1BR at ~$2,200 is more realistic.",
   },
 ];
 
-// Reference points used for the "what matters to you" scoring.
+// Reference points used for scoring.
 const TARGET = {
-  budget: 2000,          // your target monthly rent
-  golfLabel: "West Boca golf course (Boca West / Boca Lago area)",
-  aldiLabel: "Nearest Aldi",
+  budget: 2000,
+  golfLabel: "The Breakers Golf Course, Palm Beach (One South County Rd)",
+  aldiLabel: "Nearest Aldi (Lake Worth Beach: 214 N Dixie Hwy · West Palm Beach: 2481 Okeechobee Blvd)",
 };
