@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>West Boca Apartment Comparison — near golf & Aldi, ~$2k</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🏌️ West Boca Apartment Compare</h1>
+    <p class="sub">
+      Near the West Boca golf-course communities (Boca West / Boca Lago), close to Aldi,
+      tuned to a ~$2,000/month budget. Adjust what matters to you and compare.
+    </p>
+  </header>
+
+  <div class="wrap">
+    <section class="controls">
+      <div class="ctrl">
+        <label>Max rent: <span class="val" id="maxRentVal">$2,800</span></label>
+        <input type="range" id="maxRent" min="1500" max="3500" step="50" value="2800" />
+      </div>
+
+      <div class="ctrl">
+        <label>Unit size</label>
+        <select id="bedType">
+          <option value="rent2br">2 bedroom</option>
+          <option value="rent1br">1 bedroom</option>
+        </select>
+      </div>
+
+      <div class="ctrl">
+        <label>Sort by</label>
+        <select id="sort">
+          <option value="score">Best fit</option>
+          <option value="rentLow">Lowest rent</option>
+          <option value="aldi">Closest to Aldi</option>
+          <option value="golf">Closest to golf</option>
+        </select>
+      </div>
+
+      <div class="ctrl weights">
+        <label>What matters to you (weights)</label>
+        <div class="weight-row"><span>💰 Budget <span class="val" id="w_budget_val">8</span></span>
+          <input type="range" id="w_budget" min="0" max="10" /></div>
+        <div class="weight-row"><span>🛒 Near Aldi <span class="val" id="w_aldi_val">7</span></span>
+          <input type="range" id="w_aldi" min="0" max="10" /></div>
+        <div class="weight-row"><span>⛳ Near golf <span class="val" id="w_golf_val">5</span></span>
+          <input type="range" id="w_golf" min="0" max="10" /></div>
+        <div class="weight-row"><span>🏊 Amenities <span class="val" id="w_amenities_val">3</span></span>
+          <input type="range" id="w_amenities" min="0" max="10" /></div>
+      </div>
+    </section>
+
+    <section id="grid" class="grid"></section>
+
+    <section id="compare"></section>
+
+    <div class="disclaimer">
+      Rents and distances are approximate, gathered from public listing sites in May 2026, and
+      change often — verify with each community before deciding. Distances use the nearest West Boca
+      golf course (there is no public “Breakers” golf course in West Boca; The Breakers is in Palm
+      Beach). Sources:
+      <a href="https://www.apartments.com/west-boca-raton-boca-raton-fl/" target="_blank" rel="noopener">Apartments.com — West Boca</a>,
+      <a href="https://www.zillow.com/boca-west-boca-raton-fl/apartments-under-2000/" target="_blank" rel="noopener">Zillow — under $2k</a>.
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
